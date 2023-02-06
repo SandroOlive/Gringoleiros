@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-3 mb-3"><%= title %></h1>
+
+      <% if(action == 'add') { %>
+
+      <div class="card">
+        <!--
+        <div class="card-header">Verb</div>
+        -->
+        <div class="card-body">
+          <form method="POST" action="/verbs/add_verbs">
+            <div class="row">
+              <div class="col-md-3">
+               <div class="mb-6">
+                <label>Verb</label>
+                 <input
+                   type="text"
+                   name="verb"
+                   id="verb"
+                  class="form-control"
+                />
+               </div>
+             </div>
+             <div class="col-md-3">
+              <div class="mb-6">
+               <label>Translation</label>
+               <input
+                 type="text"
+                 name="translation"
+                 id="translation"
+                 class="form-control"
+               />
+              </div>
+            </div>
+             <div class="col-md-3">
+               <div class="mb-6">
+                <label>Verb_Order</label>
+                <input
+                  type="text"
+                  name="verb_order"
+                  id="verb_order"
+                  class="form-control"
+                />
+               </div>
+             </div>
+        <div class="card-body">
+          <form method="POST" action="/verbs/add_verbs">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Present Eu</label>
+                  <input
+                    type="text"
+                    name="present_eu"
+                    id="present_eu"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Past eu</label>
+                  <input
+                    type="text"
+                    name="past_eu"
+                    id="past_eu"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Imperfect eu</label>
+                  <input
+                    type="text"
+                    name="imperfect_eu"
+                    id="imperfect_eu"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Eu</label>
+                  <input
+                    type="text"
+                    name="future_eu"
+                    id="future_eu"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Past Eu</label>
+                  <input
+                    type="text"
+                    name="future_past_eu"
+                    id="future_past_eu"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Present Voce</label>
+                  <input
+                    type="text"
+                    name="present_voce"
+                    id="present_voce"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Past Voce</label>
+                  <input
+                    type="text"
+                    name="past_voce"
+                    id="past_voce"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Imperfect Voce</label>
+                  <input
+                    type="text"
+                    name="imperfect_voce"
+                    id="imperfect_voce"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Voce</label>
+                  <input
+                    type="text"
+                    name="future_voce"
+                    id="future_voce"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Past Voce</label>
+                  <input
+                    type="text"
+                    name="future_past_voce"
+                    id="future_past_voce"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Present Nos</label>
+                  <input
+                    type="text"
+                    name="present_nos"
+                    id="present_nos"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Past Nos</label>
+                  <input
+                    type="text"
+                    name="past_nos"
+                    id="past_nos"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Imperfect Nos</label>
+                  <input
+                    type="text"
+                    name="imperfect_nos"
+                    id="imperfect_nos"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Nos</label>
+                  <input
+                    type="text"
+                    name="future_nos"
+                    id="future_nos"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Past Nos</label>
+                  <input
+                    type="text"
+                    name="future_past_nos"
+                    id="future_past_nos"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Present Eles</label>
+                  <input
+                    type="text"
+                    name="present_eles"
+                    id="present_eles"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Past Eles</label>
+                  <input
+                    type="text"
+                    name="past_eles"
+                    id="past_eles"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Imperfect Eles</label>
+                  <input
+                    type="text"
+                    name="imperfect_eles"
+                    id="imperfect_eles"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Eles</label>
+                  <input
+                    type="text"
+                    name="future_eles"
+                    id="future_eles"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Past Eles</label>
+                  <input
+                    type="text"
+                    name="future_past_eles"
+                    id="future_past_eles"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-10">
+               <label for="notes">Notes</label>
+               <textarea 
+                class="form-control" 
+                id="notes" 
+                rows="3">
+               </textarea>
+             </div>
+             </div>
+            <div class="float-end">
+              <input
+                type="submit"
+                name="submit_button"
+                class="btn btn-primary btn-lg"
+                value="Add"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+      <% } else if(action == 'edit') { %>
+      <div class="card">
+        <div class="card">
+          <div class="card-body">
+            <!--   edit part discover how to remove  -->
+              <form method="POST" action="/verbs/edit/<%= verbsData.id %>">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="mb-6">
+                    <label>Verb</label>
+                    <input
+                      type="text"
+                      name="verb"
+                      id="verb"
+                      class="form-control"
+                      value="<%=verbsData.verb %>"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="mb-6">
+                   <label>Translation</label>
+                   <input
+                     type="text"
+                     name="translation"
+                     id="translation"
+                     class="form-control"
+                     value="<%=verbsData.translation %>"
+                   />
+                  </div>
+                </div>
+            <div class="col-md-3">
+              <div class="mb-6">
+                <label>Verb_order</label>
+                <input
+                  type="text"
+                  name="verb_order"
+                  id="verb_order"
+                  class="form-control"
+                  value="<%=verbsData.verb_order %>"
+                />
+             </div>
+           </div>
+        <div class="card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Present Eu</label>
+                  <input
+                    type="text"
+                    name="present_eu"
+                    id="present_eu"
+                    class="form-control"
+                    value="<%=verbsData.present_eu %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Past eu</label>
+                  <input
+                    type="text"
+                    name="past_eu"
+                    id="past_eu"
+                    class="form-control"
+                    value="<%=verbsData.past_eu %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Imperfect eu</label>
+                  <input
+                    type="text"
+                    name="imperfect_eu"
+                    id="imperfect_eu"
+                    class="form-control"
+                    value="<%=verbsData.imperfect_eu %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Eu</label>
+                  <input
+                    type="text"
+                    name="future_eu"
+                    id="future_eu"
+                    class="form-control"
+                    value="<%=verbsData.future_eu %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Past Eu</label>
+                  <input
+                    type="text"
+                    name="future_past_eu"
+                    id="future_past_eu"
+                    class="form-control"
+                    value="<%=verbsData.future_past_eu %>"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Present Voce</label>
+                  <input
+                    type="text"
+                    name="present_voce"
+                    id="present_voce"
+                    class="form-control"
+                    value="<%=verbsData.present_voce %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Past Voce</label>
+                  <input
+                    type="text"
+                    name="past_voce"
+                    id="past_voce"
+                    class="form-control"
+                    value="<%=verbsData.past_voce %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Imperfect Voce</label>
+                  <input
+                    type="text"
+                    name="imperfect_voce"
+                    id="imperfect_voce"
+                    class="form-control"
+                    value="<%=verbsData.imperfect_voce %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Voce</label>
+                  <input
+                    type="text"
+                    name="future_voce"
+                    id="future_voce"
+                    class="form-control"
+                    value="<%=verbsData.future_voce %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Past Voce</label>
+                  <input
+                    type="text"
+                    name="future_past_voce"
+                    id="future_past_voce"
+                    class="form-control"
+                    value="<%=verbsData.future_past_voce %>"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Present Nos</label>
+                  <input
+                    type="text"
+                    name="present_nos"
+                    id="present_nos"
+                    class="form-control"
+                    value="<%=verbsData.present_nos %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Past Nos</label>
+                  <input
+                    type="text"
+                    name="past_nos"
+                    id="past_nos"
+                    class="form-control"
+                    value="<%=verbsData.past_nos %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Imperfect Nos</label>
+                  <input
+                    type="text"
+                    name="imperfect_nos"
+                    id="imperfect_nos"
+                    class="form-control"
+                    value="<%=verbsData.imperfect_nos %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Nos</label>
+                  <input
+                    type="text"
+                    name="future_nos"
+                    id="future_nos"
+                    class="form-control"
+                    value="<%=verbsData.future_nos %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Past Nos</label>
+                  <input
+                    type="text"
+                    name="future_past_nos"
+                    id="future_past_nos"
+                    class="form-control"
+                    value="<%=verbsData.future_past_nos %>"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Present Eles</label>
+                  <input
+                    type="text"
+                    name="present_eles"
+                    id="present_eles"
+                    class="form-control"
+                    value="<%=verbsData.present_eles %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Past Eles</label>
+                  <input
+                    type="text"
+                    name="past_eles"
+                    id="past_eles"
+                    class="form-control"
+                    value="<%=verbsData.past_eles %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Imperfect Eles</label>
+                  <input
+                    type="text"
+                    name="imperfect_eles"
+                    id="imperfect_eles"
+                    class="form-control"
+                    value="<%=verbsData.imperfect_eles %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Eles</label>
+                  <input
+                    type="text"
+                    name="future_eles"
+                    id="future_eles"
+                    class="form-control"
+                    value="<%=verbsData.future_eles %>"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="mb-3">
+                  <label>Future Past Eles</label>
+                  <input
+                    type="text"
+                    name="future_past_eles"
+                    id="future_past_eles"
+                    class="form-control"
+                    value="<%=verbsData.future_past_eles %>"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-10">
+               <label for="notes">Notes</label>
+               <textarea 
+                class="form-control" 
+                id="notes" 
+                rows="3"
+                value="<%=verbsData.notes %>"
+                >
+                </textarea>
+             </div>
+             </div>
+            <div class="float-end">
+              <input
+                type="submit"
+                name="submit_button"
+                class="btn btn-primary btn-lg"
+                value="Save Changes"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <% } else { %> <% if(message.length > 0) { %>
+      <div class="alert alert-success"><%= message %></div>
+      <% } %>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="row"> 
+            <div class="col"><h2>Verbs</h2></div>
+            <div class="col">
+              <a href="/verbs/add" class="btn btn-success btn-lg float-end"
+                >Add</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <nav aria-label="...">
+            <ul class="pagination pagination-sm">
+
+                <%
+                const alpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+                for (let i = 0; i < alpha.length; i ++ ) {
+
+                  if(alpha[i] == "A" ) {
+
+                    %>
+                    <li class="page-item active" aria-current="page">
+                      <span class="page-link"><%= alpha[i] %></span>
+
+
+                      <form method="POST" action="/verbs/byLetter/<%= verbsData.id %>">
+
+
+                        
+                    </li>
+                    <%
+
+                  }else {
+
+                    %> 
+                  <li class="page-item"><a class="page-link" href="/verbs/byLetter/<%= alpha[i] %>"> <%= alpha[i] %> </a></li>
+                  <% 
+                  }
+
+                  } %>
+                
+            </ul>
+          </nav>
+
+          <div class="table-responsive"></div>
+          <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Verb</th>
+                <th scope="col">Translation</th>
+                <th scope="col">Verb Order</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <% if(verbsData.length > 0) { verbsData.forEach(function(data){ %>
+            <tr>
+              <td><%= data.verb %></td>
+              <td><%= data.translation %></td>
+              <td><%= data.verb_order %></td>
+              <td>
+                  <a
+                  href="/verbs/edit/<%= data.id %>"
+                  class="btn btn-primary btn-sm"
+                  >Edit
+                  <a
+                    href="/verbs/delete/<%= data.id %>"
+                    class="btn btn-danger btn-sm"
+                    >Delete</a
+                  >
+                </a>
+              </td>
+            </tr>
+            <% }); } else { %>
+            <tr>
+              <td colspan="5">No Data Found</td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+      </div>
+
+      <% } %>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
