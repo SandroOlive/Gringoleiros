@@ -1,7 +1,7 @@
 /*
 //port
 //const port = 3000;
-//app.listen(port, () => console.info(`App listening to port ${port}`));
+//app.lis ten(port, () => console.info(`App listening to port ${port}`));
 */
 
 const createError = require("http-errors");
